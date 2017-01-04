@@ -21,7 +21,7 @@ container1:
     gateway: 192.168.122.1
     netmask: 255.255.255.0
   libvirt_vms:
-    - name: calico-1
+    - name: docker-centos7
       ip: 192.168.122.111
       template: user-data_centos7
       src_image: http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1511.qcow2c.xz

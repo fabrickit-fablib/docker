@@ -1,0 +1,6 @@
+node_map:
+  centos7:
+    hosts:
+      - 192.168.122.111
+    fabruns:
+      - docker/docker

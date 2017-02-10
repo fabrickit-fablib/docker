@@ -32,4 +32,11 @@ class Docker(SimpleBase):
 
         filer.template('/etc/yum.repos.d/docker.repo', data=data)
         self.install_packages()
+        filer.template('/etc/sysconfig/docker', data=data)
+        filer.template('/etc/sysconfig/docker-network', data=data)
+        filer.template('/etc/sysconfig/docker-storage', data=data)
+        filer.template('/usr/lib/systemd/system/docker.service', data=data)
+
+        sudo('systemctl daemon-reload')
+
         self.start_services()
